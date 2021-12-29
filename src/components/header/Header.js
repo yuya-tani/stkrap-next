@@ -6,7 +6,7 @@ import Link from "../../Link";
 const HeaderItems = [
   { name: "Discography", link: "discography/" },
   { name: "Biography", link: "biography/" },
-  { name: "Contact", link: "contact" },
+  { name: "Contact", link: "contact/" },
 ];
 
 const Header = (props) => {
@@ -22,13 +22,18 @@ const Header = (props) => {
       <AppBar elevation={trigger ? 4 : 0} sx={{ backgroundColor: "rgba(250,250,250,0.8)" }}>
         <Toolbar sx={{ color: "#333333" }}>
           <Box sx={{ flexGrow: 1 }}>
-            <Button variant="text" component={Link} href="/" sx={{ paddingTop: "10px", paddingBottom: "10px" }}>
+            <Button
+              variant="text"
+              component={Link}
+              href="/"
+              sx={{ paddingTop: "10px", paddingBottom: "10px", "&:hover": { borderRadius: "0" } }}
+            >
               <Typography variant="h6">STK RAP</Typography>
             </Button>
           </Box>
           <Stack direction="row" justifyContent="center" alignItems="center" spacing={0}>
             {HeaderItems.map((item) => (
-              <HeaderMenu item={item} />
+              <HeaderMenu key={item.name} item={item} />
             ))}
           </Stack>
         </Toolbar>
