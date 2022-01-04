@@ -1,22 +1,20 @@
 import * as React from "react";
-import { Box, Button, Container, Grid, MobileStepper, Paper, Typography } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import { KeyboardArrowLeft as ArrowLeftIcon, KeyboardArrowRight as ArrowRightIcon } from "@mui/icons-material";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 import Particles from "../src/components/common/Particles";
 import LatestSound from "../src/components/top/LatestSound";
 import MainMenu from "../src/components/top/MainMenu";
-import Link from "../src/Link";
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Index = () => {
   return (
     <>
       {/* メインタイトル */}
-      <Box sx={{ backgroundColor: "#263238", color: "#eeeeee" }}>
+      <Box
+        sx={{
+          background: "linear-gradient(90deg, rgba(38,47,56,1) 0%, rgba(114,139,167,1) 35%, rgba(197,207,224,1) 100%);",
+          color: "#ffffff",
+        }}
+      >
         <Container maxWidth="md">
           <Particles />
           <Typography

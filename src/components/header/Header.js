@@ -4,9 +4,9 @@ import { AppBar, Box, Button, Stack, Toolbar, Typography, useScrollTrigger } fro
 import Link from "../../Link";
 
 const HeaderItems = [
-  { name: "Discography", link: "discography/" },
-  { name: "Biography", link: "biography/" },
-  { name: "Contact", link: "contact/" },
+  { name: "Discography", link: "/discography" },
+  { name: "Biography", link: "/biography" },
+  { name: "Contact", link: "/contact" },
 ];
 
 const Header = (props) => {

@@ -17,7 +17,6 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-material-ui-carousel": "^3.1.1",
     "react-parallax": "^3.3.0",
     "react-responsive-carousel": "^3.2.22",
     "react-swipeable-views": "^0.14.0",
