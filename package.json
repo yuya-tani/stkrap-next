@@ -1,32 +1,33 @@
 {
-  "name": "nextjs",
-  "version": "5.0.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "^5.2.1",
-    "@mui/material": "latest",
-    "clsx": "latest",
-    "install": "^0.13.0",
-    "next": "latest",
-    "npm": "^8.3.0",
-    "particles-bg": "^2.5.5",
-    "prop-types": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-parallax": "^3.3.0",
-    "react-responsive-carousel": "^3.2.22",
-    "react-swipeable-views": "^0.14.0",
-    "react-swipeable-views-utils": "^0.14.0"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build && next export",
-    "start": "next start",
-    "deploy": "npm run build && firebase deploy --only hosting",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
-  }
+    "name": "nextjs",
+    "version": "5.0.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/cache": "latest",
+        "@emotion/react": "latest",
+        "@emotion/server": "latest",
+        "@emotion/styled": "latest",
+        "@mui/icons-material": "^5.2.1",
+        "@mui/material": "latest",
+        "clsx": "latest",
+        "install": "^0.13.0",
+        "next": "latest",
+        "npm": "^8.3.0",
+        "particles-bg": "^2.5.5",
+        "prop-types": "latest",
+        "react": "latest",
+        "react-dom": "latest",
+        "react-parallax": "^3.3.0",
+        "react-responsive-carousel": "^3.2.22",
+        "react-swipeable-views": "^0.14.0",
+        "react-swipeable-views-utils": "^0.14.0",
+        "swiper": "^8.0.7"
+    },
+    "scripts": {
+        "dev": "next",
+        "build": "next build && next export",
+        "start": "next start",
+        "deploy": "npm run build && firebase deploy --only hosting",
+        "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    }
 }

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
-import Particles from "../src/components/common/Particles";
 import LatestSound from "../src/components/top/LatestSound";
 import MainMenu from "../src/components/top/MainMenu";
 
@@ -16,10 +15,9 @@ const Index = () => {
         }}
       >
         <Container maxWidth="md">
-          <Particles />
           <Typography
             variant="h1"
-            component="h1"
+            component="h3"
             gutterBottom
             mt={5}
             sx={{ letterSpacing: 10, textAlign: "left", margin: "0", padding: "40px 0" }}

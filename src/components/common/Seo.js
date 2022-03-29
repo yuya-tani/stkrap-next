@@ -1,8 +1,8 @@
 import Head from "next/head";
 
 const Seo = ({ pageTitle, pageDescription, pagePath, pageImg, pageImgWidth, pageImgHeight }) => {
-  const defaultTitle = "stk site";
-  const defaultDescription = "stkのサイトです";
+  const defaultTitle = "stk sound library";
+  const defaultDescription = "stk 音源公開サイトです。";
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle;
   const description = pageDescription ? pageDescription : defaultDescription;
