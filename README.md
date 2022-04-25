@@ -6,17 +6,16 @@
 npm run dev
 ```
 
-カルーセル
-https://github.com/Learus/react-material-ui-carousel
+Swiper.js
+https://swiperjs.com/
 
-パララックス
-https://github.com/rrutsche/react-parallax
+### firebase.json のキャッシュ期間の設定
 
-後ろですげー動く
-https://github.com/lindelof/particles-bg
-
-色んなアニメーション
-https://react-web-animation.surge.sh/
-
-UI アニメーションライブラリ色々
-https://bestofreact.com/t/ui-animation
+- １時間　　　 3600
+- １２時間　　 43200
+- １日　　　　 86400
+- １週間　　　 604800
+- １か月　　　 2592000
+- ３か月　　　 5184000
+- 半年　　　　 15552000
+- １年　　　　 31536000

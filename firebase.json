@@ -1,28 +1,68 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "hosting": {
-    "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  },
-  "emulators": {
-    "functions": {
-      "port": 5001
-    },
     "firestore": {
-      "port": 8080
+        "rules": "firestore.rules",
+        "indexes": "firestore.indexes.json"
     },
     "hosting": {
-      "port": 5000
+        "public": "out",
+        "cleanUrls": true,
+        "trailingSlash": false,
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [{
+                "source": "/discography/**",
+                "destination": "/discography/[slug].html"
+            },
+            {
+                "source": "/sitemap2.xml",
+                "function": "sitemap2"
+            }
+        ],
+        "headers": [{
+                "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+                "headers": [{
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }]
+            },
+            {
+                "source": "**/*.@(jpg|jpeg|gif|png)",
+                "headers": [{
+                    "key": "Cache-Control",
+                    "value": "max-age=0"
+                }]
+            },
+            {
+                "source": "**/*.css",
+                "headers": [{
+                    "key": "Cache-Control",
+                    "value": "max-age=0"
+                }]
+            },
+            {
+                "source": "**/*.js",
+                "headers": [{
+                    "key": "Cache-Control",
+                    "value": "max-age=0"
+                }]
+            }
+        ]
     },
-    "ui": {
-      "enabled": true
+    "emulators": {
+        "functions": {
+            "port": 5001
+        },
+        "firestore": {
+            "port": 8080
+        },
+        "hosting": {
+            "port": 5000
+        },
+        "ui": {
+            "enabled": true
+        }
     }
-  }
 }

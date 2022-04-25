@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "slug": "",
+    "type": "solo",
+    "title": "",
+    "artist": {
+        "rap": "",
+        "lyric": "",
+        "track": "",
+        "mix": "",
+        "movie": ""
+    },
+    "url": {
+        "isEmbed": "",
+        "image": "",
+        "sound": "",
+        "movie": "",
+        "embed": {
+            "soundCloud": "",
+            "youtube": "",
+            "vimeo": ""
+        }
+    },
+    "releaseDate": ""
+}]

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
-import ProTip from "../../src/ProTip";
 import Link from "../../src/Link";
 import Copyright from "../../src/components/Common/Copyright";
 
@@ -14,7 +13,6 @@ const Contact = () => {
         <Button variant="contained" component={Link} noLinkStyle href="/">
           Go to the main page
         </Button>
-        <ProTip />
         <Copyright />
       </Box>
     </Container>

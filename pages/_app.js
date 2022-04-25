@@ -4,6 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
+import { AnimatePresence } from "framer-motion";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 
@@ -19,14 +20,16 @@ export default function MyApp(props) {
 
   return (
     <CacheProvider value={emotionCache}>
-      <Seo />
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-          <ScrollTop />
-        </Layout>
-      </ThemeProvider>
+      <AnimatePresence exitBeforeEnter>
+        <Seo />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+            <ScrollTop />
+          </Layout>
+        </ThemeProvider>
+      </AnimatePresence>
     </CacheProvider>
   );
 }

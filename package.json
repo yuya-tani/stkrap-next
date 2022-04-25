@@ -9,25 +9,24 @@
         "@emotion/styled": "latest",
         "@mui/icons-material": "^5.2.1",
         "@mui/material": "latest",
+        "axios": "^0.26.1",
         "clsx": "latest",
-        "install": "^0.13.0",
+        "framer-motion": "^6.3.1",
         "next": "latest",
         "npm": "^8.3.0",
-        "particles-bg": "^2.5.5",
         "prop-types": "latest",
         "react": "latest",
         "react-dom": "latest",
         "react-parallax": "^3.3.0",
-        "react-responsive-carousel": "^3.2.22",
-        "react-swipeable-views": "^0.14.0",
-        "react-swipeable-views-utils": "^0.14.0",
-        "swiper": "^8.0.7"
+        "swiper": "^8.0.7",
+        "swr": "^1.3.0"
     },
     "scripts": {
         "dev": "next",
         "build": "next build && next export",
         "start": "next start",
         "deploy": "npm run build && firebase deploy --only hosting",
-        "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+        "deployhost": "firebase deploy --only hosting",
+        "deployfunc": "firebase deploy --only functions"
     }
 }

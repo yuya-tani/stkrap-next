@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Box, Button, Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import { Parallax, Background } from "react-parallax";
-import ProTip from "../../src/ProTip";
 import Link from "../../src/Link";
 import Copyright from "../../src/components/Common/Copyright";
 

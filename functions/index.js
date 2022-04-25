@@ -1,9 +1,17 @@
-const functions = require("firebase-functions");
+const { functionNames } = require("./src/constants/commonConst");
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+/**
+ * loadFunctions
+ * 各APIを登録
+ * @param funcs [object] 登録するAPIの名前
+ */
+const loadFunctions = (funcs) => {
+  for (const name in funcs) {
+    if (!process.env.K_SERVICE || process.env.K_SERVICE === name) {
+      exports[name] = require(funcs[name])();
+    }
+  }
+};
+
+// locadFunction実行
+loadFunctions(functionNames);
