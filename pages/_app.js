@@ -16,20 +16,20 @@ import ScrollTop from "../src/components/Common/ScrollTop";
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const { Component, emotionCache = clientSideEmotionCache, pageProps, router } = props;
 
   return (
     <CacheProvider value={emotionCache}>
-      <AnimatePresence exitBeforeEnter>
-        <Seo />
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Layout>
+      <Seo />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AnimatePresence exitBeforeEnter onExitComplete={() => window.scrollTo(0, 0)}>
+          <Layout key={router.route}>
             <Component {...pageProps} />
             <ScrollTop />
           </Layout>
-        </ThemeProvider>
-      </AnimatePresence>
+        </AnimatePresence>
+      </ThemeProvider>
     </CacheProvider>
   );
 }

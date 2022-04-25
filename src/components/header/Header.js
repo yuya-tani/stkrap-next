@@ -1,7 +1,8 @@
 import React from "react";
-import { AppBar, Box, Button, Stack, Toolbar, Typography, useScrollTrigger } from "@mui/material";
+import { AppBar, Box, Button, Stack, Toolbar, Typography, useScrollTrigger, useMediaQuery } from "@mui/material";
 
 import Link from "../../Link";
+import { BreakPoint } from "../../constants/CommonConstants";
 
 const HeaderItems = [
   { name: "Discography", link: "/discography" },
@@ -16,6 +17,9 @@ const Header = (props) => {
     threshold: 0,
     target: window ? window() : undefined,
   });
+
+  const isMd = useMediaQuery((theme) => theme.breakpoints.down(BreakPoint.md));
+  const isSm = useMediaQuery((theme) => theme.breakpoints.down(BreakPoint.sm));
 
   return (
     <>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import NextLink from "next/link";
 import { Box, Button, Card, CardContent, CardMedia, CardActionArea, Grid, Typography } from "@mui/material";
 
 import Link from "../../Link";
@@ -19,7 +20,7 @@ const MainMenu = () => {
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center" spacing={10}>
       {menuConst.map((m) => (
-        <Grid item md={4} xs={12}>
+        <Grid item md={4} xs={12} key={m.title}>
           <MenuCard href={m.href} imageUrl={m.imageUrl} alt={m.alt} title={m.title} />
         </Grid>
       ))}

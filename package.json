@@ -8,6 +8,7 @@
         "@emotion/server": "latest",
         "@emotion/styled": "latest",
         "@mui/icons-material": "^5.2.1",
+        "@mui/lab": "^5.0.0-alpha.78",
         "@mui/material": "latest",
         "axios": "^0.26.1",
         "clsx": "latest",
