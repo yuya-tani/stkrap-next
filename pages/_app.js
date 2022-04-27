@@ -7,6 +7,8 @@ import { CacheProvider } from "@emotion/react";
 import { AnimatePresence } from "framer-motion";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
+import "@vime/core/themes/default.css";
+import "@vime/core/themes/light.css";
 
 import Seo from "../src/components/Common/Seo";
 import Layout from "../src/components/Common/Layout";

@@ -38,7 +38,7 @@ const LatestSound = () => {
       className={{ display: "none" }}
     >
       {LatestSoundList.map((step, index) => (
-        <SwiperSlide key={step.label} style={{ width: "500px", height: "500px" }}>
+        <SwiperSlide key={step.slug} style={{ width: "500px", height: "500px" }}>
           <Box
             component="img"
             sx={{
@@ -47,7 +47,7 @@ const LatestSound = () => {
               width: "100%",
             }}
             src={step.imgPath}
-            alt={step.label}
+            alt={step.title}
           />
         </SwiperSlide>
       ))}

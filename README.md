@@ -9,6 +9,12 @@ npm run dev
 Swiper.js
 https://swiperjs.com/
 
+framer-motion
+https://www.framer.com/
+
+vime-js
+https://vimejs.com/
+
 ### firebase.json のキャッシュ期間の設定
 
 - １時間　　　 3600

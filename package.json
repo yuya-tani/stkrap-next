@@ -10,6 +10,8 @@
         "@mui/icons-material": "^5.2.1",
         "@mui/lab": "^5.0.0-alpha.78",
         "@mui/material": "latest",
+        "@vime/core": "^5.3.1",
+        "@vime/react": "^5.3.1",
         "axios": "^0.26.1",
         "clsx": "latest",
         "framer-motion": "^6.3.1",
